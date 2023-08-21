@@ -1,0 +1,21 @@
+ <!-- directivas de angular: Es algo que se ubica en un boton span div para incrementar la funcionalidad del
+  html, con cosas que aporta angular-->
+
+<mat-toolbar>
+  <!-- el ngIf, que requiere del CommondModule (debe ser impportado en el component.ts para poder utilizarlo)
+  es una directiva de estructura (todos aquellos que tengan *ng son directivas de estructura), es decir que modifican
+  la estructura del template del elemento de html; con el *ngIf="false" evitaría que se renderize (dibuje)
+  ese elemento de html-->
+ <span *ngIf="true">Gentleman Angular Test</span>
+ <span class="example-spacer"></span>
+ <button
+ mat-icon-button
+ class="example-icon favorite-icon"
+ aria-label="Example icon-button with heart icon"
+ (click)="openDialog('1000ms', '1000ms')">
+ <!-- En este caso la función click, está entre parentesís lo que le permite reconocer a angular que aquí va a
+ocurrir un evento, es decir hay interacción del usuario -->
+   <mat-icon>favorite</mat-icon>
+ </button>
+</mat-toolbar>
+<!-- <button mat-raised-button >Open dialog without animation</button> -->
